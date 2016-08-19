@@ -1,5 +1,5 @@
 import java.sql.*;
-DB_URL=""; //your db url
+DB_URL=""; //db url
 USER="";  // db user
 PASS=""; // db password
 Connection conn = null;

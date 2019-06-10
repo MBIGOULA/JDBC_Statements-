@@ -1,10 +1,5 @@
-import java.sql.*;
-DB_URL=""; //db url
-USER="";  // db user
-PASS=""; // db password
-Connection conn = null;
-Statement stmt = null;
-conn = DriverManager.getConnection(DB_URL,USER,PASS);
+import de.hybris.platform.core.Registry;
+conn = Registry.getCurrentTenant().getDataSource().getConnection();
 stmt = conn.createStatement();
 String sql = "select * from mp_shops" ;
 ResultSet rs = stmt.executeQuery(sql);
